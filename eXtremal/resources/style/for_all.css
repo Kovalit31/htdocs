@@ -1,8 +1,17 @@
+    /* editing default tags */
+
+body#content {
+    display: block;
+    border: 1px solid;
+}
+
 code {
     display: block;
     border-style: solid;
     border-width: 2px;
 }
+
+    /* colors */
 #color-green {
     color: green;
 }
@@ -15,6 +24,9 @@ code {
     color: yellow;
 }
 
+
+
+    /* font fonts */
 #font-serif {
     font-family:'Times New Roman', Times, serif;
 }
@@ -29,6 +41,8 @@ code {
 }
 #font-fantasy {
     font-family: 'Papyrus', fantasy;
+
+    /* Font types */
 }
 #italic {
     font-style: italic;
