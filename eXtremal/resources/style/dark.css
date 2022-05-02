@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    color: white;
+}
+A {
+    color: red; /* Цвет ссылок */
+}
+A:visited {
+    color: #cecece; /* Цвет посещенных ссылок */
+}
+A:active {
+    color: #ffff00; /* Цвет активных ссылок */
+}
+code {
+    border-color: aqua;
+}
