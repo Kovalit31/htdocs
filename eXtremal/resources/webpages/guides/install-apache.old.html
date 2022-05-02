@@ -1,0 +1,76 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="/eXtremal/resources/style/for_all.css">
+        <link rel="stylesheet" href="/eXtremal/resources/style/dark.css">
+        <meta charset="utf-8">
+        <title>Installing Apache</title>
+    </head>
+    
+        <div id="container-default"><h1>Installing Apache</h1>
+        Apache is a <span id="color-green">webserver</span>, which you can download and install <span id="italic">on many platforms.</span><br />
+        Apache is opensource software, so you cn watch out a source code of Apache.<br />
+        <br />
+        To install it, you need to go on this website: <a href="http://www.apache.org">here</a>.<br />
+        <h2>Install</h2><br>
+        <h3>Linux</h3><br>
+        For Ubuntu/Debian:<br>
+        <code>sudo apt-get install apache2 php</code><br />
+        For Fedora/RedHat:<br>
+        <code>sudo dnf install httpd -y</code><br>
+        <h3>Windows</h3><br>
+        For Windows Apache can be found <a href="https://www.apachelounge.com/download/">here</a>.<br />
+        <h4>Configuring Apache for Windows</h4><br>
+        Unpack Apache to folder, where isn't whitespace (such as C:\Apache) and <br />
+        unpack php to folder, where isn't whitespace (such as C:\PHP). <br />
+        Then download mod_fcgid from Apche Lounge website. <br />
+        Unpack file "mod_fcgid.so" to folder Apache\modules <br>
+        Then go to Apache\conf, open file httpd.conf and write this in the start of the file (This line must be after comments (comments starts with #)):<br /><br>
+        <code>
+        Define SRVROOT = "path/to/apache"
+        </code><br /><br />
+        Then write this in the end of the file:<br /><br />
+        <code>
+        Define PHPPATH = "path/to/php"<br>
+        LoadModule fcgid_module modules/mod_fcgid.so<br>
+        &lt;IfModule fcgid_module&gt;<br>
+<br>
+<br>
+   FcgidMaxProcesses 300<br>
+   FcgidMaxProcessesPerClass 300<br>
+<br>
+   FcgidOutputBufferSize 65536<br>
+   FcgidConnectTimeout 10<br>
+   FcgidProcessLifeTime 0<br>
+   FcgidMaxRequestsPerProcess 0<br>
+   FcgidMinProcessesPerClass 0<br>
+   FcgidFixPathinfo 0<br>
+   FcgidProcessLifeTime 0<br>
+   FcgidZombieScanInterval 20<br>
+   FcgidMaxRequestLen 536870912<br>
+   FcgidIOTimeout 120<br>
+   FcgidTimeScore 3<br>
+<br>
+   FcgidPassHeader Authorization<br>
+<br>
+   FcgidInitialEnv PHPRC "${PHPPATH}"<br>
+   FcgidInitialEnv PATH "${PHPPATH}";C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;"<br>
+   FcgidInitialEnv SystemRoot "C:\\Windows"<br>
+   FcgidInitialEnv SystemDrive "C:"<br>
+   FcgidInitialEnv TEMP "C:\\WINDOWS\\TEMP"<br>
+   FcgidInitialEnv TMP "C:\\WINDOWS\\TEMP"<br>
+   FcgidInitialEnv windir "C:\\WINDOWS"<br>
+   &lt;Files ~ "\.php$"&gt;<br>
+      Options Indexes FollowSymLinks ExecCGI<br>
+      AddHandler fcgid-script .php<br>
+      FcgidWrapper "${PHPPATH}\\php-cgi.exe" .php<br>
+   &lt;/Files&gt;<br>
+&lt;/IfModule&gt;<br>
+    </code></br /><br />
+    If you want allow cookies (for this site this must be enabled), find parameter "#LoadModule session_cookie_module modules/mod_session_cookie.so" and <br />
+    enable it, deleting "#"<br /><br />
+    <h4>Configuring PHP:</h4>
+    
+    <a href="../home.php"> Go back </a>
+    </body>
+<html>
