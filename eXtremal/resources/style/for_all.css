@@ -16,8 +16,13 @@ table#container-content {
 }
 td#content-center {
     width: 70%;
+    max-width: 80%
 }
-
+td#content-right {
+    min-width: 20%;
+    max-width: 30%;
+    vertical-align: top;
+}
     /* colors */
 #color-green {
     color: green;
