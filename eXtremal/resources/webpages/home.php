@@ -5,20 +5,19 @@
     </head>
     <body>
         <?php
-            if(!isset($_COOKIE["language"])) {
-                echo "Cannot Load SITE";
-            } else {
-                if ($_COOKIE["language"]=="Russian") {
-                    echo "<h1>Установка прошла успешно!</h1>Если изображается не правильно, то посмотрите<a href=\"./guides/install-apache.html\">здесь</a><br>Не то язык? <a href=\"../../index.html\"> Изменить </a>";
+                if ($_COOKIE["language"]=="ru") {
+                    echo "<h1>Установка прошла успешно!</h1>Если изображается не правильно, то посмотрите<a href=\"./guides/install-apache-eng.html\">здесь</a><br>Не то язык? <a href=\"/index.html\">Поменять</a><br>";
+                }
+                elseif ($_COOKIE["language"] == "lv") {
+                        echo "<h1></h1>Ja izskatas nepareizi, skatities <a href=\"./guides/install-apache-eng.html\"> šeit</a><br> Nepareiza valoda? <a href=\"/index.html\"> Izmainīt </a> <br>";
+                } 
+                elseif ($_COOKIE["language"] == "en"){
+                    echo "Not your language? <a href=\"/index.html\">Select out!</a><br>";
                 }
                 else {
-                    if ($_COOKIE["language"] == "Latvian") {
-                        echo "Ja izskatas nepareizi, skatities
-                        <a href=\"./guides/install-apache.html\"> šeit</a><br>
-                        Nepareiza valoda? <a href=\"../../index.html\"> Izmainīt </a>";
-                    }
+                    echo "Cannot Load SITE";
                 }
-            }
         ?>
+        <br />No content? Set it up! <a href="./guides/install-apache-eng.html">here</a>
     </body> 
 <html>
