@@ -1,4 +1,45 @@
-    /* editing default tags */
+/* Pretty radio buttons */
+
+.tabs>input[type="radio"] {
+    display: none;
+  }
+  
+  .tabs>input[type="radio"]:checked+label {
+    background-color: yellow;
+  }
+  
+  .tabs>div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+  
+  .tabs>label {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: gray;
+    border: 1px solid transparent;
+    padding: 2px 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 4px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    margin-right: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .tabs>label:first-of-type {
+    margin-left: 0;
+  }
+
+/* editing default tags */
 
 code {
     display: block;

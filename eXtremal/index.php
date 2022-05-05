@@ -2,7 +2,7 @@
 <html>
     <meta charset="utf-8" />
     <head>
-        <link rel="stylesheet" href="./resources/style/startpage/start_theme.css">
+        <link rel="stylesheet" href="./resources/style/for_all.css">
         <title>Start Page</title>
     </head>
     <body>
