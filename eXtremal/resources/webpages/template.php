@@ -4,14 +4,14 @@
         <?php 
             if($_COOKIE["theme"] == "dark") {
                 echo "<link rel=\"stylesheet\" href=\"/eXtremal/resources/style/dark.css\">";
-            } elseif($_COOKIE["theme"] == "light") {
-                echo "<link rel=\"stylesheet\" href=\"/eXtremal/resources/style/light.css\">";
             } else {
-                echo "<script> window.location.href=\"/index.html\" </script>";
+                if($_COOKIE["theme"] == "light") {
+                    echo "<link rel=\"stylesheet\" href=\"/eXtremal/resources/style/light.css\">";
+                }
             }
         ?>
         <meta charset="utf-8">
-        <title>Simple Blog -</title>
+        <title>Simple Blog - Reset Page</title>
     </head>
     <body>
         <table id="container-content" border="1">
@@ -19,15 +19,7 @@
                 <td colspan = "3" id="hat">
                 <?php 
                     # Hat
-                    if($_COOKIE["language"] == "en"){
-                        echo "";
-                    } elseif($_COOKIE["language"] == "ru") {
-                        echo "";
-                    } elseif($_COOKIE["language"] == "lv") {
-                        echo "";
-                    } else {
-                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
-                    }
+                    echo "<h1>Simple Blog</h1>";
                 ?>
                 </td>
             </tr>

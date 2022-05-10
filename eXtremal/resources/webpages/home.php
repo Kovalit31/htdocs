@@ -1,23 +1,73 @@
 <html>
     <head>
+        <link rel="stylesheet" href="/eXtremal/resources/style/for_all.css">
+        <?php 
+            if($_COOKIE["theme"] == "dark") {
+                echo "<link rel=\"stylesheet\" href=\"/eXtremal/resources/style/dark.css\">";
+            } else { 
+                if($_COOKIE["theme"] == "light") {
+                    echo "<link rel=\"stylesheet\" href=\"/eXtremal/resources/style/light.css\">";
+                }
+            }
+        ?>
         <meta charset="utf-8">
-        <title></title>
+        <title>Simple Blog - Home Page</title>
     </head>
     <body>
-        <?php
-                if ($_COOKIE["language"]=="ru") {
-                    echo "<h1>Установка прошла успешно!</h1>Если изображается не правильно, то посмотрите<a href=\"./guides/install-apache-eng.html\">здесь</a><br>Не то язык? <a href=\"./reset.html\">Поменять</a><br>";
+        <table id="container-content" border="1">
+            <tr class="hat">
+                <td colspan = "3" id="hat">
+                <?php 
+                    # Hat
+                    echo "<h1>Simple Blog</h1>";
+                ?>
+                </td>
+            </tr>
+            <tr class="content">
+                <!--<td id="content-left">p</td>-->
+                <td id="content-center">
+                <?php 
+                    # Content center
+                    if($_COOKIE["language"] == "en"){
+                        echo "Not your language? <a href=\"./reset.php\">Select out!</a><br>";
+                    } elseif($_COOKIE["language"] == "ru") {
+                        echo "<h1>Установка прошла успешно!</h1>Если изображается не правильно, то посмотрите<a href=\"./guides/install-apache-eng.html\">здесь</a><br>Не то язык? <a href=\"./reset.php\">Поменять</a><br>";
+                    } elseif($_COOKIE["language"] == "lv") {
+                        echo "<h1></h1>Ja izskatas nepareizi, skatities <a href=\"./guides/install-apache-eng.html\"> šeit</a><br> Nepareiza valoda? <a href=\"./reset.php\"> Izmainīt </a> <br>";
+                    } else {
+                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
+                    }
+                ?></td>
+                <td id="content-right">
+                <?php 
+                    # Content right
+                    if($_COOKIE["language"] == "en"){
+                        echo "";
+                    } elseif($_COOKIE["language"] == "ru") {
+                        echo "";
+                    } elseif($_COOKIE["language"] == "lv") {
+                        echo "";
+                    } else {
+                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
+                    }
+                ?>
+                </td>
+            </tr>
+            <tr class="footer">
+                <td colspan="3" id="footer">
+                <?php 
+                   echo "<br />No content? Set it up! <a href=\"./guides/install-apache-eng.html\">here</a><br>If found bugs, write <a href=\"mailto:nonecone20@gmail.com\">here</a><br><a href=\"http://github.com/Kovalit31\" target=\"_blank\">My github</a><a href=\"http://github.com/Kovalit31/htdocs\"><img alt=\"Source Code\" title=\"Source\" align=\"right\" src=\"/eXtremal/resources/images/github-mark/";
+                if($_COOKIE["theme"] == "dark") {
+                    echo "dark";
+                } else {
+                    if($_COOKIE["theme"] == "light") {
+                        echo "light";
+                    }
                 }
-                elseif ($_COOKIE["language"] == "lv") {
-                        echo "<h1></h1>Ja izskatas nepareizi, skatities <a href=\"./guides/install-apache-eng.html\"> šeit</a><br> Nepareiza valoda? <a href=\"./reset.html\"> Izmainīt </a> <br>";
-                } 
-                elseif ($_COOKIE["language"] == "en"){
-                    echo "Not your language? <a href=\"./reset.html\">Select out!</a><br>";
-                }
-                else {
-                    echo "Cannot Load SITE";
-                }
-        ?>
-        <br />No content? Set it up! <a href="./guides/install-apache-eng.html">here</a>
-    </body> 
+                echo "-32px.png></a>";
+                ?>
+                </td>
+            </tr>
+            </table>
+    </body>
 <html>
