@@ -56,7 +56,8 @@
             <tr class="footer">
                 <td colspan="3" id="footer">
                 <?php 
-                   echo "<br />No content? Set it up! <a href=\"./guides/install-apache-eng.html\">here</a><br>If found bugs, write <a href=\"mailto:nonecone20@gmail.com\">here</a><br><a href=\"http://github.com/Kovalit31\" target=\"_blank\">My github</a><a href=\"http://github.com/Kovalit31/htdocs\"><img alt=\"Source Code\" title=\"Source\" align=\"right\" src=\"/eXtremal/resources/images/github-mark/";
+                    # Footer
+                    echo "<br />No content? Set it up! <a href=\"./guides/install-apache-eng.html\">here</a><br>If found bugs, write <a href=\"mailto:nonecone20@gmail.com\">here</a><br><a href=\"http://github.com/Kovalit31\" target=\"_blank\">My github</a><a href=\"http://github.com/Kovalit31/htdocs\"><img alt=\"Source Code\" title=\"Source\" align=\"right\" src=\"/eXtremal/resources/images/github-mark/";
                 if($_COOKIE["theme"] == "dark") {
                     echo "dark";
                 } else {
@@ -64,7 +65,7 @@
                         echo "light";
                     }
                 }
-                echo "-32px.png></a>";
+                echo "-32px.png\"></a>";
                 ?>
                 </td>
             </tr>

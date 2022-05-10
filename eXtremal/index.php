@@ -44,7 +44,7 @@
                         if (!isset($_COOKIE["theme"])){
                             echo "Select Theme: <br /><select name=\"theme\"><option value=\"light\">Light</option> <option value=\"dark\">Dark</option></select><br/>";
                         };
-                            echo "<input type=\"submit\" id=\"submit-button\"> </form>";
+                            echo "<input type=\"submit\" id=\"submit-button\">  <input type=\"reset\"> </form>";
                         }
                     }
                 ?></td>
