@@ -19,6 +19,7 @@
                 <td colspan = "3" id="hat">
                 <?php 
                     # Hat
+                    echo "<h1>Simple Blog</h1>";
                     if($_COOKIE["language"] == "en"){
                         echo "";
                     } elseif($_COOKIE["language"] == "ru") {

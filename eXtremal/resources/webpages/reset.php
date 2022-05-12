@@ -20,6 +20,15 @@
                 <?php 
                     # Hat
                     echo "<h1>Simple Blog</h1>";
+                    if($_COOKIE["language"] == "en"){
+                        echo "";
+                    } elseif($_COOKIE["language"] == "ru") {
+                        echo "";
+                    } elseif($_COOKIE["language"] == "lv") {
+                        echo "";
+                    } else {
+                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
+                    }
                 ?>
                 </td>
             </tr>
