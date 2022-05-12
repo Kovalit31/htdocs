@@ -38,6 +38,44 @@
                 <?php 
                     # Content center
                     if($_COOKIE["language"] == "en"){
+                        echo "<h1 id=\"installing_apache\">Installing Apache</h1>
+                        Apache is a <span id=\"color-green\">webserver</span>, which you can download and install <span id=\"italic\">on many platforms.</span><br />
+                        Apache is opensource software, so you cn watch out a source code of Apache.<br />
+                            <h2 id=\"install\">Install</h2>
+                            <h3 id=\"linux\">Linux</h3>
+                        For Ubuntu/Debian:<br>";
+                    } elseif($_COOKIE["language"] == "ru") {
+                        echo "<h1 id=\"installing_apache\">Установка Apache</h1>
+                        Apache – это <span id=\"color-green\">веб-сервер</span>, который можно загрузить и установить <span id=\"italic\">на многих платформах.</span><br />
+                        Apache — это программное обеспечение с открытым исходным кодом, поэтому вы можете следить за исходным кодом Apache.<br />
+                            <h2 id=\"install\">Установка</h2>
+                            <h3 id=\"linux\">Linux</h3>
+                        Для Ubuntu/Debian:<br>";
+                    } elseif($_COOKIE["language"] == "lv") {
+                        echo "<h1 id=\"installing_apache\">Apache instalēšana</h1>
+                        Apache ir <span id=\"color-green\">tīmekļa serveris</span>, kuru varat lejupielādēt un instalēt <span id=\"italic\">daudzās platformās.</span><br />
+                        Apache ir atvērtā pirmkoda programmatūra, tāpēc varat paskatit Apache pirmkodu.<br />
+                            <h2 id=\"install\">Instalēt</h2>
+                            <h3 id=\"linux\">Linux</h3>
+                        Ubuntu/Debian:<br>";
+                    } else {
+                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
+                    }
+
+                    echo "<code>sudo apt-get install apache2 php</code><br />";
+                    if($_COOKIE["language"] == "en"){
+                        echo "";
+                    } elseif($_COOKIE["language"] == "ru") {
+                        echo "";
+                    } elseif($_COOKIE["language"] == "lv") {
+                        echo "";
+                    } else {
+                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
+                    }
+                    echo "<code>
+                    Define SRVROOT = \"path/to/apache\"
+                    </code>";
+                    if($_COOKIE["language"] == "en"){
                         echo "";
                     } elseif($_COOKIE["language"] == "ru") {
                         echo "";
@@ -82,17 +120,37 @@
                     FcgidWrapper \"${PHPPATH}\\php-cgi.exe\" .php<br>
                     &lt;/Files&gt;<br>
                     &lt;/IfModule&gt;<br>
-                </code>";
-                ?></td>
-                <td id="content-right">
-                <?php 
-                    # Content right
+                    </code>";
                     if($_COOKIE["language"] == "en"){
                         echo "";
                     } elseif($_COOKIE["language"] == "ru") {
                         echo "";
                     } elseif($_COOKIE["language"] == "lv") {
                         echo "";
+                    } else {
+                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
+                    }
+
+                    if($_COOKIE["language"] == "en"){
+                        echo "";
+                    } elseif($_COOKIE["language"] == "ru") {
+                        echo "";
+                    } elseif($_COOKIE["language"] == "lv") {
+                        echo "";
+                    } else {
+                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
+                    }
+                ?></td>
+                <td id="content-right">
+                <?php 
+                    # Content right
+                    if($_COOKIE["language"] == "en"){
+                        echo "Table of Contents:\n<ul>
+                        <li><a href=\"#installing_apache\">Installing Apache</a><ul><li><a href=\"#install\">Install</a><ul><li><a href=\"#linux\">Linux</a></li></ul></li></ul></li></ul>";
+                    } elseif($_COOKIE["language"] == "ru") {
+                        echo "Содержание:\n<ul><li><a href=\"#installing_apache\">Установка Apache</a><ul><li><a href=\"#install\">Установка</a><ul><li><a href=\"#linux\">Linux</a></li></ul></li></ul></li></ul>";
+                    } elseif($_COOKIE["language"] == "lv") {
+                        echo "Satura rādītājs:\n<ul><li><a href=\"#installing_apache\">Apache instalēšana</a><ul><li><a href=\"#install\">Instalēt</a><ul><li><a href=\"#linux\">Linux</a></li></ul></li></ul></li></ul>";
                     } else {
                         echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
                     }
