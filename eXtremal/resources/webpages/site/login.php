@@ -4,14 +4,14 @@
         <?php 
             if($_COOKIE["theme"] == "dark") {
                 echo "<link rel=\"stylesheet\" href=\"/eXtremal/resources/style/dark.css\">";
+            } elseif($_COOKIE["theme"] == "light") {
+                echo "<link rel=\"stylesheet\" href=\"/eXtremal/resources/style/light.css\">";
             } else {
-                if($_COOKIE["theme"] == "light") {
-                    echo "<link rel=\"stylesheet\" href=\"/eXtremal/resources/style/light.css\">";
-                }
+                echo "<script> window.location.href=\"/index.html\" </script>";
             }
         ?>
         <meta charset="utf-8">
-        <title>Simple Blog - Reset Page</title>
+        <title>Simple Blog - Login</title>
     </head>
     <body>
         <table id="container-content" border="1">
@@ -21,11 +21,11 @@
                     # Hat
                     echo "<h1>Simple Blog</h1>";
                     if($_COOKIE["language"] == "en"){
-                        echo "<a href=\"/eXtremal/resources/webpages/home.php\">Home</a><p align=\"right\"><a href=\"/eXtremal/resources/webpages/site/register.php\" id=\"user-login\">Register</a> <a href=\"/eXtremal/resources/webpages/site/login.php\" id=\"user-login\">Login</a></p>";
+                        echo "<a href=\"/eXtremal/resources/webpages/home.php\">Home</a>";
                     } elseif($_COOKIE["language"] == "ru") {
-                        echo "<a href=\"/eXtremal/resources/webpages/home.php\">Home</a><p align=\"right\"><a href=\"/eXtremal/resources/webpages/site/register.php\" id=\"user-login\">Register</a> <a href=\"/eXtremal/resources/webpages/site/login.php\" id=\"user-login\">Login</a></p>";
+                        echo "<a href=\"/eXtremal/resources/webpages/home.php\">Home</a>";
                     } elseif($_COOKIE["language"] == "lv") {
-                        echo "<a href=\"/eXtremal/resources/webpages/home.php\">Home</a><p align=\"right\"><a href=\"/eXtremal/resources/webpages/site/register.php\" id=\"user-login\">Register</a> <a href=\"/eXtremal/resources/webpages/site/login.php\" id=\"user-login\">Login</a></p>";
+                        echo "<a href=\"/eXtremal/resources/webpages/home.php\">Home</a>";
                     } else {
                         echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
                     }
@@ -37,30 +37,16 @@
                 <td id="content-center">
                 <?php 
                     # Content center
-                    echo "<form method=\"post\" action=\"/eXtremal/resources/webpages/setter.php\">";
                     if($_COOKIE["language"] == "en"){
-                        echo "Reselect language:";
+                        echo "";
                     } elseif($_COOKIE["language"] == "ru") {
-                        echo "Перевыбрать язык:";
+                        echo "";
                     } elseif($_COOKIE["language"] == "lv") {
-                        echo "Izmantot citu tekstu:";
+                        echo "";
                     } else {
-                        echo "Reselect language:";
+                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
                     }
-                    echo "<br /> <div class=\"tabs\"> <input type=\"radio\" id=\"lv\" name=\"language\" value=\"lv\"> <label for=\"lv\">Latviešu</label> <input type=\"radio\" id=\"ru\" name=\"language\" value=\"ru\"> <label for=\"ru\">Русский</label> <input type=\"radio\" id=\"en\" name=\"language\" value=\"en\"> <label for=\"en\">English</label> </div>";
-                    if($_COOKIE["language"] == "en"){
-                        echo "Reselect Theme:";
-                    } elseif($_COOKIE["language"] == "ru") {
-                        echo "Перевыбрать тему:";
-                    } elseif($_COOKIE["language"] == "lv") {
-                        echo "Izmantot citu tēmu:";
-                    } else {
-                        echo "Reselect theme:";
-                    }
-                    echo "<br /><select name=\"theme\"><option value=\"light\">Light</option> <option value=\"dark\">Dark</option></select><br/>
-                    <input type=\"submit\" id=\"submit-button\">  <input type=\"reset\"> </form>";
-                ?>
-                </td>
+                ?></td>
                 <td id="content-right">
                 <?php 
                     # Content right
@@ -71,7 +57,7 @@
                     } elseif($_COOKIE["language"] == "lv") {
                         echo "";
                     } else {
-                        echo "";
+                        echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
                     }
                 ?>
                 </td>

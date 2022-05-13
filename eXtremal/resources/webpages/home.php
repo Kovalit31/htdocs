@@ -21,11 +21,11 @@
                     # Hat
                     echo "<h1>Simple Blog</h1>";
                     if($_COOKIE["language"] == "en"){
-                        echo "";
+                        echo "<p align=\"right\"><a href=\"/eXtremal/resources/webpages/site/register.php\" id=\"user-login\">Register</a> <a href=\"/eXtremal/resources/webpages/site/login.php\" id=\"user-login\">Login</a></p>";
                     } elseif($_COOKIE["language"] == "ru") {
-                        echo "";
+                        echo "<p align=\"right\"><a href=\"/eXtremal/resources/webpages/site/register.php\" id=\"user-login\">Register</a> <a href=\"/eXtremal/resources/webpages/site/login.php\" id=\"user-login\">Login</a></p>";
                     } elseif($_COOKIE["language"] == "lv") {
-                        echo "";
+                        echo "<p align=\"right\"><a href=\"/eXtremal/resources/webpages/site/register.php\" id=\"user-login\">Register</a> <a href=\"/eXtremal/resources/webpages/site/login.php\" id=\"user-login\">Login</a></p>";
                     } else {
                         echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
                     }
@@ -40,9 +40,9 @@
                     if($_COOKIE["language"] == "en"){
                         echo "Not your language? <a href=\"./reset.php\">Select out!</a><br>";
                     } elseif($_COOKIE["language"] == "ru") {
-                        echo "<h1>Установка прошла успешно!</h1>Если изображается не правильно, то посмотрите<a href=\"./guides/install-apache-eng.html\">здесь</a><br>Не то язык? <a href=\"./reset.php\">Поменять</a><br>";
+                        echo "<h1>Установка прошла успешно!</h1>Если изображается не правильно, то посмотрите<a href=\"./guides/install-apache.php\">здесь</a><br>Не то язык? <a href=\"./reset.php\">Поменять</a><br>";
                     } elseif($_COOKIE["language"] == "lv") {
-                        echo "<h1></h1>Ja izskatas nepareizi, skatities <a href=\"./guides/install-apache-eng.html\"> šeit</a><br> Nepareiza valoda? <a href=\"./reset.php\"> Izmainīt </a> <br>";
+                        echo "<h1></h1>Ja izskatas nepareizi, skatities <a href=\"./guides/install-apache.php\"> šeit</a><br> Nepareiza valoda? <a href=\"./reset.php\"> Izmainīt </a> <br>";
                     } else {
                         echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
                     }
@@ -66,7 +66,7 @@
                 <td colspan="3" id="footer">
                 <?php 
                     # Footer
-                    echo "<br />No content? Set it up! <a href=\"./guides/install-apache-eng.html\">here</a><br>If found bugs, write <a href=\"mailto:nonecone20@gmail.com\">here</a><br><a href=\"http://github.com/Kovalit31\" target=\"_blank\">My github</a><a href=\"http://github.com/Kovalit31/htdocs\"><img alt=\"Source Code\" title=\"Source\" align=\"right\" src=\"/eXtremal/resources/images/github-mark/";
+                    echo "<p><br />No content? Set it up! <a href=\"./guides/install-apache-eng.html\">here</a><br>If found bugs, write <a href=\"mailto:nonecone20@gmail.com\">here</a><br><a href=\"http://github.com/Kovalit31\" target=\"_blank\">My github</a><a href=\"http://github.com/Kovalit31/htdocs\"></p><img alt=\"Source Code\" title=\"Source\" align=\"right\" src=\"/eXtremal/resources/images/github-mark/";
                 if($_COOKIE["theme"] == "dark") {
                     echo "dark";
                 } else {

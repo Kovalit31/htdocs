@@ -85,6 +85,12 @@ td#footer {
     color: yellow;
 }
 
+#user-login {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid;
+}
 
 
     /* font fonts */

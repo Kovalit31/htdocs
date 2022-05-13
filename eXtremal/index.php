@@ -10,6 +10,9 @@
                 }
             }
         ?>
+        <?php
+        
+        ?>
         <meta charset="utf-8">
         <title>Simple Blog - Select Page</title>
     </head>
@@ -75,7 +78,7 @@
             <tr class="footer">
                 <td colspan="3" id="footer">
                 <?php 
-                   echo "<br />No content? Set it up! <a href=\"./guides/install-apache-eng.html\">here</a><br>If found bugs, write <a href=\"mailto:nonecone20@gmail.com\">here</a><br><a href=\"http://github.com/Kovalit31\" target=\"_blank\">My github</a><a href=\"http://github.com/Kovalit31/htdocs\"><img alt=\"Source Code\" title=\"Source\" align=\"right\" src=\"/eXtremal/resources/images/github-mark/light-32px.png\"></a>";
+                   echo "<p><br />No content? Set it up! <a href=\"./guides/install-apache-eng.html\">here</a><br>If found bugs, write <a href=\"mailto:nonecone20@gmail.com\">here</a><br><a href=\"http://github.com/Kovalit31\" target=\"_blank\">My github</a><a href=\"http://github.com/Kovalit31/htdocs\"></p><img alt=\"Source Code\" title=\"Source\" align=\"right\" src=\"/eXtremal/resources/images/github-mark/light-32px.png\"></a>";
                 ?>
                 </td>
             </tr>

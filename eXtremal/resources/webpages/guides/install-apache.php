@@ -21,11 +21,11 @@
                     # Hat
                     echo "<h1>Simple Blog</h1>";
                     if($_COOKIE["language"] == "en"){
-                        echo "";
+                        echo "<a href=\"/eXtremal/resources/webpages/home.php\">Home</a><p align=\"right\"><a href=\"\" id=\"user-login\">Register</a> <a href=\"\" id=\"user-login\">Login</a></p>";
                     } elseif($_COOKIE["language"] == "ru") {
-                        echo "";
+                        echo "<a href=\"/eXtremal/resources/webpages/home.php\">Home</a><p align=\"right\"><a href=\"\" id=\"user-login\">Register</a> <a href=\"\" id=\"user-login\">Login</a></p>";
                     } elseif($_COOKIE["language"] == "lv") {
-                        echo "";
+                        echo "<a href=\"/eXtremal/resources/webpages/home.php\">Home</a><p align=\"right\"><a href=\"\" id=\"user-login\">Register</a> <a href=\"\" id=\"user-login\">Login</a></p>";
                     } else {
                         echo "Go to <a href=\"/eXtremal/resources/index.php\">setter</a>";
                     }
@@ -38,21 +38,21 @@
                 <?php 
                     # Content center
                     if($_COOKIE["language"] == "en"){
-                        echo "<h1 id=\"installing_apache\">Installing Apache</h1>
+                        echo "<img src=\"/eXtremal/resources/images/apache/httpd.png\"><br><h1 id=\"installing_apache\">Installing Apache</h1>
                         Apache is a <span id=\"color-green\">webserver</span>, which you can download and install <span id=\"italic\">on many platforms.</span><br />
                         Apache is opensource software, so you cn watch out a source code of Apache.<br />
                             <h2 id=\"install\">Install</h2>
                             <h3 id=\"linux\">Linux</h3>
                         For Ubuntu/Debian:<br>";
                     } elseif($_COOKIE["language"] == "ru") {
-                        echo "<h1 id=\"installing_apache\">Установка Apache</h1>
+                        echo "<img src=\"/eXtremal/resources/images/apache/httpd.png\"><br><h1 id=\"installing_apache\">Установка Apache</h1>
                         Apache – это <span id=\"color-green\">веб-сервер</span>, который можно загрузить и установить <span id=\"italic\">на многих платформах.</span><br />
                         Apache — это программное обеспечение с открытым исходным кодом, поэтому вы можете следить за исходным кодом Apache.<br />
                             <h2 id=\"install\">Установка</h2>
                             <h3 id=\"linux\">Linux</h3>
                         Для Ubuntu/Debian:<br>";
                     } elseif($_COOKIE["language"] == "lv") {
-                        echo "<h1 id=\"installing_apache\">Apache instalēšana</h1>
+                        echo "<img src=\"/eXtremal/resources/images/apache/httpd.png\"><br><h1 id=\"installing_apache\">Apache instalēšana</h1>
                         Apache ir <span id=\"color-green\">tīmekļa serveris</span>, kuru varat lejupielādēt un instalēt <span id=\"italic\">daudzās platformās.</span><br />
                         Apache ir atvērtā pirmkoda programmatūra, tāpēc varat paskatit Apache pirmkodu.<br />
                             <h2 id=\"install\">Instalēt</h2>
@@ -161,7 +161,7 @@
                 <td colspan="3" id="footer">
                 <?php 
                     # Footer
-                    echo "<br />No content? Set it up! <a href=\"./guides/install-apache-eng.html\">here</a><br>If found bugs, write <a href=\"mailto:nonecone20@gmail.com\">here</a><br><a href=\"http://github.com/Kovalit31\" target=\"_blank\">My github</a><a href=\"http://github.com/Kovalit31/htdocs\"><img alt=\"Source Code\" title=\"Source\" align=\"right\" src=\"/eXtremal/resources/images/github-mark/";
+                    echo "<p><br />No content? Set it up! <a href=\"./guides/install-apache-eng.html\">here</a><br>If found bugs, write <a href=\"mailto:nonecone20@gmail.com\">here</a><br><a href=\"http://github.com/Kovalit31\" target=\"_blank\">My github</a><a href=\"http://github.com/Kovalit31/htdocs\"></p><img alt=\"Source Code\" title=\"Source\" align=\"right\" src=\"/eXtremal/resources/images/github-mark/";
                 if($_COOKIE["theme"] == "dark") {
                     echo "dark";
                 } else {
